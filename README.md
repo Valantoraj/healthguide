@@ -143,6 +143,14 @@ Add the files from this drive link "https://drive.google.com/drive/folders/1QR4F
 
 Add the files from this drive link "https://drive.google.com/drive/folders/1mKgSDCxynerh9dU7XeuQAjJirESBCDDq" to healthguide\health_care\mental_healthcare
 
+
+## Screenshots
+
+
+
+![alt text](<WhatsApp Image 2024-09-09 at 22.00.11_282766ec.jpg>)
+![alt text](<WhatsApp Image 2024-09-09 at 22.00.36_331362e0.jpg>)
+
 ## Directory Hierarchy
 
 |—— .gitignore
