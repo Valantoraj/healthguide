@@ -136,10 +136,12 @@ deactivate
 
    This will launch your website, and you can access it by navigating to http://127.0.0.1:8000 in your browser.
 
-## Files to be added from drive
+## Files to be added from drive before running
 
-link:https://drive.google.com/drive/folders/1WMjhGgQwdE1AtQ-U4PyZAVdbUOpy8Jhi?usp=drive_link
-In the above folder there will be two files download and place it in the path hackathon\health_care\healthcare\
+
+Add the files from this drive link "https://drive.google.com/drive/folders/1QR4Fo8fWHMT7TXZwQAoDIZXGZz3U3hKp" to healthguide\health_care\healthcare
+
+Add the files from this drive link "https://drive.google.com/drive/folders/1mKgSDCxynerh9dU7XeuQAjJirESBCDDq" to healthguide\health_care\mental_healthcare
 
 ## Directory Hierarchy
 
