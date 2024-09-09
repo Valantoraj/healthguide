@@ -148,8 +148,8 @@ Add the files from this drive link "https://drive.google.com/drive/folders/1mKgS
 
 
 
-![alt text](<WhatsApp Image 2024-09-09 at 22.00.11_282766ec.jpg>)
-![alt text](<WhatsApp Image 2024-09-09 at 22.00.36_331362e0.jpg>)
+![home page](<WhatsApp Image 2024-09-09 at 22.00.11_282766ec.jpg>)
+![book appointment](<WhatsApp Image 2024-09-09 at 22.00.36_331362e0.jpg>)
 
 ## Directory Hierarchy
 
