@@ -12,7 +12,7 @@ overall_count=0
 yes_reduction_factor=0
 no_reduction_factor=0
 
-data=pd.read_csv("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\complex_diseases.csv", encoding='ISO-8859-1')
+data=pd.read_csv("hackathon\\health_care\\healthcare\\complex_diseases.csv", encoding='ISO-8859-1')
 
 #Independent-X
 X=data.drop(columns=['Disease'], axis='columns')
@@ -51,7 +51,7 @@ print(confusion_matrix(y_test,y_pred))
 #Dump/Save model
 joblib.dump(rf_classifier,'C:\\Users\\valan\\Downloads\\archive (1)\\rf_classifier_model.pkl')
 '''
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\complex_disease_data.json",'r') as f:
+with open("hackathon\\health_care\\healthcare\\complex_disease_data.json",'r') as f:
     old_disease_data=json.load(f)    
 f.close()
 
@@ -65,9 +65,9 @@ for k,v in old_disease_data.items():
 
 
 #Loading the Classifier model built based on RandomForest method of classification
-rf_classifier=joblib.load('C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\complex_disease_diagnoser.pkl')
+rf_classifier=joblib.load('hackathon\\health_care\\healthcare\\complex_disease_diagnoser.pkl')
 
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\diseases_info.json",'r') as file:
+with open("hackathon\\health_care\\healthcare\\diseases_info.json",'r') as file:
     disease_info=json.load(file)
 file.close()
 

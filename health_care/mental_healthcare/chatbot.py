@@ -20,16 +20,16 @@ prev=None
 asked=set()
 count_tries=0
 user_input=[]
-data=pd.read_csv("C:\\Users\\valan\\Videos\\mental_healthcare\\disease_symptom_matrix.csv", encoding='ISO-8859-1')
+data=pd.read_csv("hackathon\\health_care\\mental_healthcare\\disease_symptom_matrix.csv", encoding='ISO-8859-1')
 
 
-with open("C:\\Users\\valan\\Videos\\mental_healthcare\\mental_health_data.json",'r') as f:
+with open("hackathon\\health_care\\mental_healthcare\\mental_health_data.json",'r') as f:
     old_disease_data=json.load(f)    
 f.close()
-with open("C:\\Users\\valan\\Videos\\mental_healthcare\\mental_health_questions.json",'r') as f:
+with open("hackathon\\health_care\\mental_healthcare\\mental_health_questions.json",'r') as f:
     ask_ques=json.load(f)    
 f.close()
-with open("C:\\Users\\valan\\Videos\\mental_healthcare\\cure.json",'r') as f:
+with open("hackathon\\health_care\\mental_healthcare\\cure.json",'r') as f:
     cure=json.load(f)    
 f.close()
 with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\mental_healthcare\\suggestion.json") as f:
@@ -42,7 +42,7 @@ d={}
 for k,v in ask_ques['symptoms'].items():
     d[k.lower()]=v
 ask_ques['symptoms']=d
-with open("C:\\Users\\valan\\Videos\\mental_healthcare\\intents_mental_health.json",'r') as f:
+with open("hackathon\\health_care\\mental_healthcare\\intents_mental_health.json",'r') as f:
     intents=json.load(f)    
 f.close()
 
@@ -60,8 +60,8 @@ X=data.drop(columns=['Disease'], axis='columns')
 symptoms=list(X.columns)
 
 
-rf_classifier = joblib.load('C:\\Users\\valan\\Videos\\mental_healthcare\\rf_classifier_model_mental_health.pkl')
-scaler = joblib.load('C:\\Users\\valan\\Videos\\mental_healthcare\\scaler_mental_health.pkl')
+rf_classifier = joblib.load('hackathon\\health_care\\mental_healthcare\\rf_classifier_model_mental_health.pkl')
+scaler = joblib.load('hackathon\\health_care\\mental_healthcare\\scaler_mental_health.pkl')
 
 
 
@@ -69,7 +69,7 @@ nltk.download('punkt')
 nltk.download('wordnet')
 
 try:
-    with open("C:\\Users\\valan\\Videos\\mental_healthcare\\symptom_response.json", 'r') as f:
+    with open("hackathon\\health_care\\mental_healthcare\\symptom_response.json", 'r') as f:
         data = json.load(f)
 except FileNotFoundError:
     print("Error: The file was not found.")
@@ -98,7 +98,7 @@ for label, texts in data.items():
 label_encoder = LabelEncoder()
 y = label_encoder.fit_transform(labels)
 d_required={}
-with open("C:\\Users\\valan\\Videos\\v\\v\\website\\mental_healthcare\\required_mental_health_classify.json") as f:
+with open("hackathon\\health_care\\mental_healthcare\\required_mental_health_classify.json") as f:
     d_required=json.load(f)
 words=d_required["words"]
 word_index = {word: i for i, word in enumerate(words)}
@@ -196,7 +196,7 @@ def pred(symptoms):
 
 
 def chat(message):
-    model = load_model('C:\\Users\\valan\\Videos\\mental_healthcare\\chatbot_model_mental_health_sympt.h5')
+    model = load_model('hackathon\\health_care\\mental_healthcare\\chatbot_model_mental_health_sympt.h5')
     # Function to predict symptom based on user input
     def predict_symptom(first_inp):
         processed_input = preprocess(first_inp)

@@ -9,7 +9,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 def predict_heart_disease(user_input):
     print("hi")
     # Create a DataFrame for the user input
-    df = pd.read_csv("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\Heart_Disease_Prediction.csv")
+    df = pd.read_csv("hackathon\\health_care\\Heart_Disease_Prediction.csv")
 
     # Convert categorical features to numerical values
     df['Sex'] = df['Sex'].astype('category').cat.codes
@@ -68,7 +68,7 @@ def predict_heart_disease(user_input):
 # Function to make predictions based on user input
 def predict_stroke(user_input):
     
-    df = pd.read_csv("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\full_data.csv")
+    df = pd.read_csv("hackathon\\health_care\\full_data.csv")
 
 # Convert categorical features to numerical values using LabelEncoder
     label_encoders = {
@@ -134,7 +134,7 @@ def predict_stroke(user_input):
 # Function to make predictions based on user input
 def predict_lung_cancer(user_input):
     
-    df = pd.read_csv("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\lung cancer survey.csv")
+    df = pd.read_csv("hackathon\\health_care\\lung cancer survey.csv")
 
     # Print data types before preprocessing
     print("Data Types Before Preprocessing:")
@@ -197,7 +197,7 @@ def predict_lung_cancer(user_input):
 
 # Function to make predictions based on user input
 def predict_diabetes(user_input):
-    df = pd.read_csv("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\Diabetes_prediction.csv")
+    df = pd.read_csv("hackathon\\health_care\\Diabetes_prediction.csv")
 
     # Print data types before preprocessing
     print("Data Types Before Preprocessing:")
@@ -236,7 +236,7 @@ def predict_diabetes(user_input):
     return prediction[0]
 
 def predict_kidney_stone(user_input):
-    df = pd.read_csv("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\kindey stone urine analysis.csv")
+    df = pd.read_csv("hackathon\\health_care\\kindey stone urine analysis.csv")
 
 
     # Ensure target is numeric
@@ -282,7 +282,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
 def predict_liver_disease(user_input):
-    df = pd.read_csv("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\Liver_disease_data.csv")
+    df = pd.read_csv("hackathon\\health_care\\Liver_disease_data.csv")
 
     # Convert categorical features to numerical values
     label_encoders = {

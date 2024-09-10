@@ -1,7 +1,7 @@
 import joblib        #Loading the model
 import pandas as pd  #Data handling
 import json          #Reading a json file
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\common_disease_data.json",'r') as f:
+with open("hackathon\\health_care\\healthcare\\common_disease_data.json",'r') as f:
     old_disease_data=json.load(f)    
 f.close()
 overall_count=0
@@ -15,7 +15,7 @@ overall_count=0
 yes_reduction_factor=0
 no_reduction_factor=0
 
-data=pd.read_csv("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\common_diseases.csv", encoding='ISO-8859-1')
+data=pd.read_csv("hackathon\\health_care\\healthcare\\common_diseases.csv", encoding='ISO-8859-1')
 
 #Independent-X
 X=data.drop(columns=['Disease'], axis='columns')
@@ -29,9 +29,9 @@ for k,v in old_disease_data.items():
 
 
 #Loading the Classifier model built based on RandomForest method of classification
-rf_classifier=joblib.load('C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\common_disease_diagnoser.pkl')
+rf_classifier=joblib.load('hackathon\\health_care\\healthcare\\common_disease_diagnoser.pkl')
 
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\diseases_info.json",'r') as file:
+with open("hackathon\\health_care\\healthcare\\diseases_info.json",'r') as file:
     disease_info=json.load(file)
 file.close()
 
@@ -70,7 +70,7 @@ def prob_format(probabilities,class_labels):   #Disease probability formatter fu
     return disease_prob
 
 def disease_conclude(disease,probability):  #disease conclusion provider
-    return_info= f"You may have \"{disease}\" and the probability is:{probability*100}%\n\n"
+    return_info= f"You may have \"{disease}\"\n\n"
     return_info+=f"About: {disease_info[disease]["About"]}\n\n"
     return_info+=f"Medication: {disease_info[disease]["Medication"]}\n"
     return_info+=f"Note: Please consider consulting with your medical consultant for the medications and dosage.\n\n"

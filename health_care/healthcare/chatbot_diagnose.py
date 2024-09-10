@@ -17,10 +17,10 @@ from healthcare import common_dis_diagnose
 lemmatizer = WordNetLemmatizer()
 
 #Opening json file holding the tags,input pattern,response
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\intents.json") as file:
+with open("hackathon\\health_care\\healthcare\\intents.json") as file:
     data = json.load(file)
 
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\healthcare\\required_data_sympt.json",'r') as f:
+with open("hackathon\\health_care\\healthcare\\required_data_sympt.json",'r') as f:
     d_load=json.load(f)
 f.close()
 symptom_list=d_load["symptom_list"]
@@ -93,9 +93,9 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 model.fit(train_x, train_y, epochs=200, batch_size=64, verbose=1)
 
 #Saves the model
-model.save('C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\chatbot_model.h5')'''
+model.save('hackathon\\chatbot_model.h5')'''
 
-model=models.load_model('C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\chatbot_model.h5')
+model=models.load_model('hackathon\\chatbot_model.h5')
 def predictor(message):    
     def clean_up_sentence(sentence):    #Clean up input
         sentence_words = word_tokenize(sentence)

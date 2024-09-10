@@ -11,7 +11,7 @@ import random
 from mental_healthcare import chatbot
 
 
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\mental_healthcare\\symptom_response.json", 'r') as f:
+with open("hackathon\\health_care\\mental_healthcare\\symptom_response.json", 'r') as f:
     d = json.load(f)
 
 resp_data={}
@@ -20,10 +20,10 @@ for k,v in d.items():
 lemmatizer = WordNetLemmatizer()
 
 #Opening json file holding the tags,input pattern,response
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\mental_healthcare\\intents_mental_health.json") as file:
+with open("hackathon\\health_care\\mental_healthcare\\intents_mental_health.json") as file:
     data = json.load(file)
 
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\mental_healthcare\\required_mental_health_bot.json") as f:
+with open("hackathon\\health_care\\mental_healthcare\\required_mental_health_bot.json") as f:
     dict_required=json.load(f)
 f.close()
 words=dict_required["words"]
@@ -36,11 +36,11 @@ import json
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 
-model = load_model('C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\mental_healthcare\\chatbot_model_mental_health.h5')
+model = load_model('hackathon\\health_care\\mental_healthcare\\chatbot_model_mental_health.h5')
 
 
 # Load the intents file to get class labels
-with open("C:\\Users\\valan\\Videos\\athish\\athish\\hackathon\\hackathon\\health_care\\mental_healthcare\\intents_mental_health.json") as file:
+with open("hackathon\\health_care\\mental_healthcare\\intents_mental_health.json") as file:
     data = json.load(file)
 def predictor(message):    
     def clean_up_sentence(sentence):    #Clean up input
